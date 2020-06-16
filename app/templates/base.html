@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' ) }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+    {% if title %}
+        <title> {{ title }} - Miniblog</title>
+    {% else %}
+        <title>Miniblog</title>
+    {% endif %}
+
+    {% block css_import %}
+    {% endblock %}
+</head>
+<body>
+
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{{url_for('index')}}">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{url_for('signup')}}">Sign up</a></li>
+                {% if current_user.is_anonymous %}
+                <li class="breadcrumb-item"><a href="{{ url_for('login') }}"> Login</a></li>
+                {% else %}
+                <li class="breadcrumb-item"><a href="{{ url_for('logout') }}">Logout</a></li>
+                {% endif %}
+            </ol>
+          </nav>
+    </div>
+    <hr>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{message}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    {% block content %}
+    HOLA
+    {% endblock%}
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>

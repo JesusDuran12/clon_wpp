@@ -1,0 +1,154 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#main_chat{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+	overflow-y: auto;
+	text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:270px;
+    width:430px;
+    border:1px solid #ACD8F0;
+	overflow:auto; 
+	background-image: url("../imagenes/1a93b17965e274c03a6804762132f130.jpg");
+	background-size: cover;
+}
+
+.mymsj{
+	background-color: greenyellow;
+}
+
+.notmine{
+	background-color: tomato;
+}
+
+.username{
+	margin-right: 10px;
+}
+
+.username::after{
+	content: " ->";
+}
+
+.log{
+	width: 320px;
+	height: 420px;
+	background: #000;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+}
+
+.boton input[type="submit"]{
+	border: none;
+  outline: none;
+  height: 40px;
+  background: #b80f22;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.boton input[type="submit"]:hover{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
+}
+
+
+
+.sign{
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    margin: auto;
+}
+
+body{
+	background-color: aquamarine;
+}
+
+#roomlist{
+	background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+	margin: auto;
+	top: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    width: 80%;
+}
+
+#input_text{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #b80f22;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
